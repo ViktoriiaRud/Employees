@@ -8,6 +8,7 @@ const EmployeesAddForm = () => {
                 <input type="text"
                 className="form control new-post-label" 
                 placeholder="name"/>
+                
                 <input type="number"
                 className="form control new-post-label" 
                 placeholder="$?"/>

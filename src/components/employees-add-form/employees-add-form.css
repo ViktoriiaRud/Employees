@@ -4,11 +4,12 @@
     background-color: darkturquoise;
     border-radius: 4px;
     box-shadow: 15px 15px 30px rgb(0, 0, 0, .15);
-    color: azure;
+    color:rgb(235, 243, 243);
 }
 
 .add-form {
     margin-top: 20px;
+
 }
 
 .add-form input {
