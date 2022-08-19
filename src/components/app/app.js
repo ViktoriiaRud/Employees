@@ -11,9 +11,9 @@ import './app.css';
     function App() {
 
         const date = [
-            {name: 'John C.', salary: 800, increase: false},
-            {name: 'Alex N.', salary: 3000, increase: true},
-            {name: 'Carl R.', salary: 5000, increase: false},
+            {name: 'John C.', salary: 800, increase: false, id: 1},
+            {name: 'Alex N.', salary: 3000, increase: true, id: 2},
+            {name: 'Carl R.', salary: 5000, increase: false, id: 3},
         ];
         return (
             <div className='app'>
