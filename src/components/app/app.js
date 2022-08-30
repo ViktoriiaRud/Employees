@@ -51,6 +51,15 @@ class App extends Component {
     }
 
 
+     onToddleIncrease = (id) => {
+        console.log(`Increase this ${id}`);
+
+     }
+
+
+     onToddleRise =() => {
+        console.log(`Rise this ${id}`);
+     }
 
         render() {
             return (
@@ -65,7 +74,10 @@ class App extends Component {
                     <EmployeesList 
                     date = 
                     {this.state.data}
-                    onDelete={this.deleteItem}/>
+                    onDelete={this.deleteItem}
+                    onToddleIncrease={this.onToddleIncrease}
+                    onToddleRise={this.onToddleRise}
+                    />
                     <EmployeesAddForm onAdd={this.addItem}/>
                 </div>
                 );
