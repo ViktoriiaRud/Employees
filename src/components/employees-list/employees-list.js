@@ -25,3 +25,4 @@ const EmployeesList = ({date, onDelete, onToddleIncrease, onToddleRise}) => {
 }
 
 export default EmployeesList;
+
