@@ -1,7 +1,7 @@
 
 import './employees-list-item.css';
 
-const EmployeesListItem = (props) => {
+const EmployeesListItem = (props) => { 
 
     const {name, salary, onDelete, onToggleProp, increase, rise} = props;
 
@@ -13,6 +13,7 @@ const EmployeesListItem = (props) => {
         classNames += ' like';
     }
 
+    
     return (
         <li className={classNames}>
             <span className="list-group-item-label" onClick={onToggleProp} data-toggle="rise">{name}</span>
