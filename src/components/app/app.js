@@ -32,7 +32,7 @@ class App extends Component {
             return {
                 data: data.filter(item => item.id !== id)
             }
-        }); 
+        }) 
     }
     
 
@@ -113,7 +113,7 @@ class App extends Component {
             case 'moreThem1000':
                 return items.filter(item => item.salary > 1000);
             default:
-                return items;        
+                return items        
         }
      }
 
