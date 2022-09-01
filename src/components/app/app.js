@@ -52,8 +52,8 @@ class App extends Component {
         });
     }
 
-
-     onToddleIncrease = (id) => {
+          //1 variant
+    //  onToggleIncrease = (id) => {
         // this.setState(({data}) => {
         //     const index = data.findIndex(elem => elem.id === id)
 
@@ -65,25 +65,25 @@ class App extends Component {
         //         data: newArr
         //     }             
         // })
-    
+  
+    //     2 variant
+    //     this.setState(({data}) => ({
+    //         data: data.map(item => {
+    //             if (item.id === id) {
+    //                 return {...item, increase: !item.increase}
+    //             }
+    //             return item;
+    //         })
+    //     }))
 
+    //  }
+
+
+     onTogglePro =(id, prop) => {
         this.setState(({data}) => ({
             data: data.map(item => {
                 if (item.id === id) {
-                    return {...item, increase: !item.increase}
-                }
-                return item;
-            })
-        }))
-
-     }
-
-
-     onToddleRise =(id) => {
-        this.setState(({data}) => ({
-            data: data.map(item => {
-                if (item.id === id) {
-                    return {...item, increase: !item.increase}
+                    return {...item, [prop]: !item[prop]}
                 }
                 return item;
             })
@@ -142,8 +142,7 @@ class App extends Component {
                     <EmployeesList 
                     date =  {visibleData}
                     onDelete={this.deleteItem}
-                    onToddleIncrease={this.onToddleIncrease}
-                    onToddleRise={this.onToddleRise}
+                    onToggleProp={this.onToggleProp}
                     />
                     <EmployeesAddForm onAdd={this.addItem}/>
                 </div>
