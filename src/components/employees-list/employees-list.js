@@ -13,7 +13,6 @@ const EmployeesList = ({date, onDelete, onToddleIncrease, onToddleRise}) => {
             onDelete={() => onDelete(id)}
             onToddleIncrease={() => onToddleIncrease(id)}
             onToddleRise={() => onToddleRise(id)}/> 
-             //1 variant: name={item.name} salary={item.salary} bat ...item
         )
     })
 
