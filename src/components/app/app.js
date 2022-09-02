@@ -22,7 +22,7 @@ class App extends Component {
             term: '',
             filter: 'all'
         }
-        this.maxId = 4
+        this.maxId = 4;
     }
 
 
@@ -35,6 +35,16 @@ class App extends Component {
         }) 
     }
     
+    onToggleProp = (id, prop) => {
+        this.setState(({data}) => ({
+            data: data.map(item => {
+                if (item.id === id) {
+                    return {...item, [prop]: !item[prop], }
+                }
+                return item;
+            })
+        }))
+    }
 
     addItem = (name, salary) => {
         const newItem = {
@@ -79,17 +89,6 @@ class App extends Component {
     //  }
 
 
-     onTogglePro =(id, prop) => {
-        this.setState(({data}) => ({
-            data: data.map(item => {
-                if (item.id === id) {
-                    return {...item, [prop]: !item[prop]}
-                }
-                return item;
-            })
-        }))
-     }
-
      searchEmp = (items, term) => {
         if (term.length === 0) {
             return items;
@@ -103,7 +102,7 @@ class App extends Component {
 
 
      onUpdateSearch = (term) => {
-       this.setState({term})
+       this.setState({term});
      }
 
      filterPost = (items, filter) => {
@@ -142,8 +141,7 @@ class App extends Component {
                     <EmployeesList 
                     date =  {visibleData}
                     onDelete={this.deleteItem}
-                    onToggleProp={this.onToggleProp}
-                    />
+                    onToggleProp={this.onToggleProp}/>
                     <EmployeesAddForm onAdd={this.addItem}/>
                 </div>
                 );
